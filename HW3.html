@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div
+            {
+                text-align: center;
+                font-family: Comic Sans MS;
+            }
+
+            body
+            {
+                width: 100%;
+                align-items: center;
+                box-sizing: border-box;
+                display: flex;
+                font-family: Comic Sans MS;
+                justify-content: center;
+                background-color: blanchedalmond;
+            }
+
+            input
+            {
+                width: 300px;
+                padding: 10px;
+                margin: auto;
+                border: 0px;
+                border: 0px;
+                background-color:lightpink;
+                border-radius: 20px;
+                font-family: Comic Sans MS;
+            }
+
+            .singup
+            {
+                padding: 100px;
+                width: 500px;
+                height: 600px;
+                margin: auto;
+                border: 0px;
+            }
+            
+            .checkbox
+            {
+                display: flex;
+            }
+
+            input::placeholder
+            {
+                color: black;
+                font-style: italic;
+                font-family: Comic Sans MS;
+            }
+
+            .submit
+            {
+                color: black;
+                background: pink;
+                height: 40px;
+                border-radius: 30px;
+                margin: 2px;
+                padding: 8px 15px;
+                border: 0px;
+                font-size: 18px;
+                font-family: monospace;
+            }
+
+            .submit:hover
+            {
+                height: 50px;
+                border-radius: 30px;
+                margin: 2px;
+                padding: 8px 15px;
+                background: palevioletred;
+            }                
+        </style>
+    </head>
+    <body>
+        <form class="signup">
+            <div>
+                <h1>註冊頁面</h1>
+                <p>
+                    暱稱:
+                    <input type="text" name="user" placeholder="暱稱，如:小黑、小白">
+                </p>
+                <p>
+                    帳號:
+                    <input type="text" name="email" placeholder="XXXXXX@gmail.com">
+                </p>
+                <p>
+                    密碼:
+                    <input type="password" name="password" placeholder="至少8個字元">
+                </p>
+                <p>
+                    電話:
+                    <input type="text" name="phone" placeholder="09-XXXXXXXXXX">
+                </p>
+                <p>
+                    生日:
+                    <input type="date" name="birth">
+                </p>
+                <p>
+                    <input class="checkbox" type="checkbox" name="rule">
+                    以閱讀<a href="https://www.facebook.com/groups/ccccourse">條款</a>
+                </p>
+                <p>
+                    <button class="submit" name="submit">註冊</button>
+                </p>
+            </div>           
+        </form>
+    </body>
+</html>
