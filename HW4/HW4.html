@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @import url("HW4.CSS");
+</style>
+<script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+        const h1 = document.createElement("h1");
+        h1.textContent = "第一章：HTML";
+        document.body.appendChild(h1);
+
+        const h2_1 = document.createElement("h2");
+        h2_1.textContent = "1.1. 什麼是 HTML";
+        document.body.appendChild(h2_1);
+
+        const p1 = document.createElement("p");
+        p1.textContent = "HTML ....";
+        document.body.appendChild(p1);
+
+        const h2_2 = document.createElement("h2");
+        h2_2.textContent = "1.2. HTML 範例";
+        document.body.appendChild(h2_2);
+
+        const pre1 = document.createElement("pre");
+        pre1.innerHTML = `
+            &lt;html&gt;
+            &lt;body&gt;
+                &lt;a href="https://youtube.com"&gt;Youtube&lt;/a&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        `;
+        document.body.appendChild(pre1);
+
+        const h1_2 = document.createElement("h1");
+        h1_2.textContent = "第二章：CSS";
+        document.body.appendChild(h1_2);
+
+        const h2_3 = document.createElement("h2");
+        h2_3.textContent = "1.1. 什麼是 CSS";
+        document.body.appendChild(h2_3);
+
+        const p2 = document.createElement("p");
+        p2.textContent = "CSS ....";
+        document.body.appendChild(p2);
+
+        const h2_4 = document.createElement("h2");
+        h2_4.textContent = "1.2. CSS 範例";
+        document.body.appendChild(h2_4);
+
+        const pre2 = document.createElement("pre");
+        pre2.innerHTML = `
+            h1 {
+                text-align: center;
+            }
+        `;
+        document.body.appendChild(pre2);
+
+        const img = document.createElement("img");
+        img.src = "水果.jpg";
+        document.body.appendChild(img);
+
+        const ul = document.createElement("ul");
+        const li1 = document.createElement("li");
+        const li2 = document.createElement("li");
+        const li3 = document.createElement("li");
+        li1.textContent = "Chapter 1";
+        li2.textContent = "Chapter 2";
+        li3.textContent = "Chapter 3";
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        document.body.appendChild(ul);
+
+        const ol = document.createElement("ol");
+        const li4 = document.createElement("li");
+        const li5 = document.createElement("li");
+        const li6 = document.createElement("li");
+        li4.textContent = "Chapter 1";
+        li5.textContent = "Chapter 2";
+        li6.textContent = "Chapter 3";
+        ol.appendChild(li4);
+        ol.appendChild(li5);
+        ol.appendChild(li6);
+        document.body.appendChild(ol);
+
+        const table = document.createElement("table");
+        table.id = "customers";
+        const thead = document.createElement("thead");
+        const tr1 = document.createElement("tr");
+        const th1 = document.createElement("th");
+        const th2 = document.createElement("th");
+        const th3 = document.createElement("th");
+        th1.textContent = "Company";
+        th2.textContent = "Contact";
+        th3.textContent = "Country";
+        tr1.appendChild(th1);
+        tr1.appendChild(th2);
+        tr1.appendChild(th3);
+        thead.appendChild(tr1);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        const tr2 = document.createElement("tr");
+        const td1 = document.createElement("td");
+        const td2 = document.createElement("td");
+        const td3 = document.createElement("td");
+        td1.textContent = "Alfreds Futterkiste";
+        td2.textContent = "Maria Anders";
+        td3.textContent = "Germany";
+        tr2.appendChild(td1);
+        tr2.appendChild(td2);
+        tr2.appendChild(td3);
+        tbody.appendChild(tr2);
+        table.appendChild(tbody);
+
+        // Add more rows...
+
+        document.body.appendChild(table);
+
+        const form = document.createElement("form");
+        form.action = "signup";
+
+        const accountLabel = document.createTextNode("帳號: ");
+        const accountInput = document.createElement("input");
+        accountInput.type = "text";
+        accountInput.name = "user";
+        form.appendChild(accountLabel);
+        form.appendChild(accountInput);
+        form.appendChild(document.createElement("br"));
+
+        const passwordLabel = document.createTextNode("密碼: ");
+        const passwordInput = document.createElement("input");
+        passwordInput.type = "password";
+        passwordInput.name = "password";
+        form.appendChild(passwordLabel);
+        form.appendChild(passwordInput);
+        form.appendChild(document.createElement("br"));
+
+        const emailLabel = document.createTextNode("信箱: ");
+        const emailInput = document.createElement("input");
+        emailInput.type = "email";
+        emailInput.name = "email";
+        form.appendChild(emailLabel);
+        form.appendChild(emailInput);
+        form.appendChild(document.createElement("br"));
+
+        const birthdayLabel = document.createTextNode("生日: ");
+        const birthdayInput = document.createElement("input");
+        birthdayInput.type = "date";
+        birthdayInput.name = "birthday";
+        form.appendChild(birthdayLabel);
+        form.appendChild(birthdayInput);
+        form.appendChild(document.createElement("br"));
+
+        const pictureLabel = document.createTextNode("照片: ");
+        const pictureInput = document.createElement("input");
+        pictureInput.type = "file";
+        pictureInput.name = "picture";
+        form.appendChild(pictureLabel);
+        form.appendChild(pictureInput);
+        form.appendChild(document.createElement("br"));
+
+        const genderLabel = document.createTextNode("性別: ");
+        const maleRadio = document.createElement("input");
+        maleRadio.type = "radio";
+        maleRadio.name = "sex";
+        maleRadio.value = "male";
+        maleRadio.checked = true;
+        const maleLabel = document.createTextNode("男");
+        const femaleRadio = document.createElement("input");
+        femaleRadio.type = "radio";
+        femaleRadio.name = "sex";
+        femaleRadio.value = "female";
+        const femaleLabel = document.createTextNode("女");
+        form.appendChild(genderLabel);
+        form.appendChild(maleRadio);
+        form.appendChild(maleLabel);
+        form.appendChild(femaleRadio);
+        form.appendChild(femaleLabel);
+        form.appendChild(document.createElement("br"));
+
+        const bloodTypeLabel = document.createTextNode("血型: ");
+        const bloodTypeSelect = document.createElement("select");
+        bloodTypeSelect.name = "BloodType";
+        const option1 = document.createElement("option");
+        option1.value = "A";
+        option1.textContent = "A 型";
+        const option2 = document.createElement("option");
+        option2.value = "B";
+        option2.textContent = "B 型";
+        const option3 = document.createElement("option");
+        option3.value = "AB";
+        option3.textContent = "AB 型";
+        const option4 = document.createElement("option");
+        option4.value = "O";
+        option4.textContent = "O 型";
+        bloodTypeSelect.appendChild(option1);
+        bloodTypeSelect.appendChild(option2);
+        bloodTypeSelect.appendChild(option3);
+        bloodTypeSelect.appendChild(option4);
+        form.appendChild(bloodTypeLabel);
+        form.appendChild(bloodTypeSelect);
+        form.appendChild(document.createElement("br"));
+
+        const aboutMeLabel = document.createTextNode("自我介紹：");
+        const aboutMeTextarea = document.createElement("textarea");
+        aboutMeTextarea.name = "AboutMe";
+        form.appendChild(aboutMeLabel);
+        form.appendChild(document.createElement("br"));
+        form.appendChild(aboutMeTextarea);
+        form.appendChild(document.createElement("br"));
+
+        const submitInput = document.createElement("input");
+        submitInput.type = "submit";
+        submitInput.value = "送出";
+        form.appendChild(submitInput);
+
+        const resetInput = document.createElement("input");
+        resetInput.type = "reset";
+        resetInput.value = "清除";
+        form.appendChild(resetInput);
+        form.appendChild(document.createElement("br"));
+
+        document.body.appendChild(form);
+    });
+</script>
+</head>
+<body>
+</body>
+</html>

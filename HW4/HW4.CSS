@@ -1,0 +1,93 @@
+/* my.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0cf5e1;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #666;
+    margin-top: 30px;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  pre {
+    background-color: #eeb053;
+    padding: 10px;
+    font-family: Consolas, monospace;
+  }
+  
+  img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+  }
+  
+  ul, ol {
+    margin: 20px;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  table {
+    margin: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  form {
+    margin: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="date"],
+  textarea,
+  select {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #45a049;
+  }
