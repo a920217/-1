@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .page {
+      display: none;
+    }
+    
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="showPage('home')">首頁</button>
+  <button onclick="showPage('register')">註冊</button>
+  <button onclick="showPage('login')">登入</button>
+  <button onclick="showPage('logout')">登出</button>
+  
+  <div id="home" class="page active">
+    <!-- 首頁內容 -->
+    <h1>歡迎來到首頁</h1>
+  </div>
+  
+  <div id="register" class="page">
+    <!-- 註冊頁面內容 -->
+    <h1>註冊新帳號</h1>
+  </div>
+  
+  <div id="login" class="page">
+    <!-- 登入頁面內容 -->
+    <h1>請輸入帳號密碼登入</h1>
+  </div>
+  
+  <div id="logout" class="page">
+    <!-- 登出頁面內容 -->
+    <h1>已成功登出</h1>
+  </div>
+  
+  <script>
+    function showPage(pageId) {
+      var pages = document.getElementsByClassName('page');
+      
+      // 隱藏所有頁面
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('active');
+      }
+      
+      // 顯示選定的頁面
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
